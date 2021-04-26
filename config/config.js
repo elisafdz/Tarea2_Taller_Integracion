@@ -28,8 +28,8 @@ const config = {
       }
   }
 }
-  },
-};
+  }
+
   
   Object.keys(config).forEach((configKey) => {
     const configValue = config[configKey];
