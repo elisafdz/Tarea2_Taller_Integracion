@@ -1,0 +1,21 @@
+{
+  "name": "tarea2",
+  "version": "1.0.0",
+  "description": "tarea2",
+  "main": "index.js",
+  "author": "Elisa",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "koa": "^2.13.1",
+    "koa-body": "^4.2.0",
+    "koa-router": "^10.0.0",
+    "pg": "^8.6.0",
+    "sequelize": "^6.6.2",
+    "sequelize-cli": "^6.2.0"
+  }
+}
