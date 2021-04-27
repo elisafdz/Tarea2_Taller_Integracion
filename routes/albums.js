@@ -81,7 +81,7 @@ router.get('albums', 'albums', async (ctx) => {
   
   });
 
-router.post('albums','artists/:id/albums', KoaBody(), validAlbum, oneAlbum, async (ctx) => {
+router.post('albums','artists/:id/albums', KoaBody(), validAlbum, albumCheck,oneAlbum, async (ctx) => {
     const body = await ctx.request.body;
     const { name } = body;
     const { genre } = body;

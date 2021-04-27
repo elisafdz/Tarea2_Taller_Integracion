@@ -115,7 +115,7 @@ router.put('artista.update','artists/:id/albums/play',KoaBody(),artistaCheck,asy
   }
 );
 
-router.post('artistas','artists', KoaBody(),  validArtist, oneArtist,async (ctx) => {
+router.post('artistas','artists', KoaBody(),  validArtist,artistaCheck, oneArtist,async (ctx) => {
     const body = await ctx.request.body;
     const { name } = body;
     const { age } = body;

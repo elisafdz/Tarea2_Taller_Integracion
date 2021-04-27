@@ -33,7 +33,7 @@ router.get('tracks', 'tracks/:id', trackCheck,async (ctx) => {
 
 });
 
-router.post('tracks','albums/:id/tracks', KoaBody(), validTrack, oneTrack, async (ctx) => {
+router.post('tracks','albums/:id/tracks', KoaBody(), validTrack, trackCheck,oneTrack, async (ctx) => {
    
     const body = await ctx.request.body;
     const { name } = body;
