@@ -90,9 +90,9 @@ router.post('albums','artists/:id/albums', KoaBody(), validAlbum, oneAlbum, asyn
     var string = name + ":" + id_r
     var id_album_parcial = Buffer.from(string).toString('base64')
     var id_album = id_album_parcial.slice(0,21);
-    var artist = "http://localhost:3000/artists/" + `${id_r}`;
-    var tracks = "http://localhost:3000/albums/" + `${id_album}/tracks`;
-    var self = "http://localhost:3000/albums/" + `${id_album}`;
+    var artist = "https://lit-earth-74462.herokuapp.com/artists/" + `${id_r}`;
+    var tracks = "https://lit-earth-74462.herokuapp.com/albums/" + `${id_album}/tracks`;
+    var self = "https://lit-earth-74462.herokuapp.com/albums/" + `${id_album}`;
     const diccionario = {
         "id": id_album,
         "name": name,

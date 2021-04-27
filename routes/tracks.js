@@ -47,9 +47,9 @@ router.post('tracks','albums/:id/tracks', KoaBody(), validTrack, oneTrack, async
     var times_played = 0;
    //busco en el album
     var artista_id = await ctx.db.albume.findOne({ where: { id: id_r_album } });
-    var artist = "http://localhost:3000/artists/" + `${artista_id.dataValues.artistumId}`;
-    var album = "http://localhost:3000/albums/" + `${id_r_album}`;
-    var self = "http://localhost:3000/tracks/" + `${id_track}`;
+    var artist = "https://lit-earth-74462.herokuapp.com/artists/" + `${artista_id.dataValues.artistumId}`;
+    var album = "https://lit-earth-74462.herokuapp.com/albums/" + `${id_r_album}`;
+    var self = "https://lit-earth-74462.herokuapp.com/tracks/" + `${id_track}`;
  
     const diccionario = {
         "id": id_track,

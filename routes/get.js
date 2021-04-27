@@ -121,9 +121,9 @@ router.post('artistas','artists', KoaBody(),  validArtist, oneArtist,async (ctx)
     const { age } = body;
     var id = Buffer.from(name).toString('base64')
     var id_listo = id.slice(0,21);
-    var albums = "http://localhost:3000/artists/" + `${id}/albums`;
-    var tracks = "http://localhost:3000/artists/" + `${id}/tracks`;
-    var self = "http://localhost:3000/artists/" + `${id}`;
+    var albums = "https://lit-earth-74462.herokuapp.com/artists/" + `${id}/albums`;
+    var tracks = "https://lit-earth-74462.herokuapp.com/artists/" + `${id}/tracks`;
+    var self = "https://lit-earth-74462.herokuapp.com/artists/" + `${id}`;
     const diccionario = {
         "id": id_listo,
         "name": name,
