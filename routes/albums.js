@@ -3,6 +3,7 @@ const router = new koaRouter();
 //const bcrypt = require('bcrypt');
 const KoaBody = require('koa-body');
 const albumCheck = require('../middlewares/album');
+const artistCheck = require('../middlewares/artista');
 const oneAlbum = require('../middlewares/oneAlbum');
 const validAlbum = require('../middlewares/validAlbum');
 //const checkParams_new_user = require('../middlewares/check_params_new_user');
@@ -81,7 +82,7 @@ router.get('albums', 'albums', async (ctx) => {
   
   });
 
-router.post('albums','artists/:id/albums', KoaBody(), validAlbum, albumCheck,oneAlbum, async (ctx) => {
+router.post('albums','artists/:id/albums', KoaBody(), validAlbum, artistCheck,oneAlbum, async (ctx) => {
     const body = await ctx.request.body;
     const { name } = body;
     const { genre } = body;
