@@ -4,7 +4,7 @@ const oneArtist = async (ctx, next) => {
     const { name } = body;
     const { age } = body;
     var id = Buffer.from(name).toString('base64')
-    var id_listo = id.slice(0,21);
+    var id_listo = id.slice(0,22);
     var albums = "http://localhost:3000/artists/" + `${id}/albums`;
     var tracks = "http://localhost:3000/artists/" + `${id}/tracks`;
     var self = "http://localhost:3000/artists/" + `${id}`;

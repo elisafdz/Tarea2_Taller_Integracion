@@ -120,7 +120,7 @@ router.post('artistas','artists', KoaBody(),  validArtist, oneArtist,async (ctx)
     const { name } = body;
     const { age } = body;
     var id = Buffer.from(name).toString('base64')
-    var id_listo = id.slice(0,21);
+    var id_listo = id.slice(0,22);
     var albums = "https://lit-earth-74462.herokuapp.com/artists/" + `${id}/albums`;
     var tracks = "https://lit-earth-74462.herokuapp.com/artists/" + `${id}/tracks`;
     var self = "https://lit-earth-74462.herokuapp.com/artists/" + `${id}`;

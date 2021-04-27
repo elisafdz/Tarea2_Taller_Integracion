@@ -7,7 +7,7 @@ const oneAlbum = async (ctx, next) => {
     var id_r = id_recibido.split("/")[2]
     var string = name + ":" + id_r
     var id_album_parcial = Buffer.from(string).toString('base64')
-    var id_album = id_album_parcial.slice(0,21);
+    var id_album = id_album_parcial.slice(0,22);
     var artist = "http://localhost:3000/artists/" + `${id_r}`;
     var tracks = "http://localhost:3000/albums/" + `${id_album}/tracks`;
     var self = "http://localhost:3000/albums/" + `${id_album}`;

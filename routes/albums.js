@@ -90,7 +90,7 @@ router.post('albums','artists/:id/albums', KoaBody(), validAlbum, artistCheck,on
     var id_r = id_recibido.split("/")[2]
     var string = name + ":" + id_r
     var id_album_parcial = Buffer.from(string).toString('base64')
-    var id_album = id_album_parcial.slice(0,21);
+    var id_album = id_album_parcial.slice(0,22);
     var artist = "https://lit-earth-74462.herokuapp.com/artists/" + `${id_r}`;
     var tracks = "https://lit-earth-74462.herokuapp.com/albums/" + `${id_album}/tracks`;
     var self = "https://lit-earth-74462.herokuapp.com/albums/" + `${id_album}`;

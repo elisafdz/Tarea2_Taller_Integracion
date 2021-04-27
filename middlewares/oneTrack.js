@@ -8,7 +8,7 @@ const oneTrack = async (ctx, next) => {
     var id_r_album = id_album_recibido.split("/")[2]
     var string = name + ":" + id_r_album
     var id_track_parcial = Buffer.from(string).toString('base64')
-    var id_track = id_track_parcial.slice(0,21);
+    var id_track = id_track_parcial.slice(0,22);
     var times_played = 0;
    //busco en el album
     var artista_id = await ctx.db.albume.findOne({ where: { id: id_r_album } });
