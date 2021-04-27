@@ -149,7 +149,8 @@ router.del('album','albums/:id', KoaBody(), albumCheck, async (ctx) => {
     let cancion = resultado_2[i];
     await cancion.destroy();
   }
-  return (ctx.body = { msg: 'album eliminado' });
+  ctx.response.status = 204
+    return ctx.response
   }
 );
   

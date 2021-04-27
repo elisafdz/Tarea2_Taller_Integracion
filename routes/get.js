@@ -168,7 +168,8 @@ router.del('artistas','artists/:id', KoaBody(),artistaCheck, async (ctx) => {
     }
     
   }
-  return (ctx.body = { msg: 'Artista eliminado' });
+  ctx.response.status = 204
+    return ctx.response
   }
 );
 

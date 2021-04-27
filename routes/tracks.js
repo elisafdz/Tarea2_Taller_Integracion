@@ -124,8 +124,8 @@ router.put('tracks.update','tracks/:id/play',KoaBody(),trackCheck,async (ctx) =>
     var id_r = id_recibido.split("/")[2]
     var resultado = await ctx.db.cancion.findOne({ where: { id: id_r } });
     await resultado.destroy(); //elimine el album
-    
-    return (ctx.body = { msg: 'cancion eliminada' });
+    ctx.response.status = 204
+    return ctx.response
     }
   );
 module.exports = router;
