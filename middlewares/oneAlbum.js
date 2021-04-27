@@ -23,7 +23,7 @@ const oneAlbum = async (ctx, next) => {
     }
     diccionario_response = 
     {
-        "id": id_album,
+        //"id": id_album,
         "artist_id": id_r,
         "name": name,
         "genre": genre,

@@ -17,6 +17,15 @@ const oneArtist = async (ctx, next) => {
         "self": self
 
     }
+    const diccionario_response = {
+        //"id": id_listo,
+        "name": name,
+        "age": age,
+        "albums": albums,
+        "tracks": tracks,
+        "self": self
+
+    }
     
         
         try{
@@ -27,7 +36,7 @@ const oneArtist = async (ctx, next) => {
         catch (error) {
             ctx.response.status = 409;
             ctx.response.message = "artista ya existe";
-            ctx.body = diccionario
+            ctx.body = diccionario_response
             return ctx.response
 
             ;}

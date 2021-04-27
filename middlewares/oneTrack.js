@@ -29,7 +29,7 @@ const oneTrack = async (ctx, next) => {
     }
     diccionario_response = 
     {
-        "id": id_track,
+       // "id": id_track,
         "album_id": id_r_album,
         "name": name,
         "duration": duration,
