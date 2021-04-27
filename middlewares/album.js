@@ -8,8 +8,15 @@ const checkAlbum = async (ctx, next) => {
             return next(ctx)
         }
         else{
-            ctx.response.status = 404;
-            ctx.response.message = "álbum no encontrado";
+            if (ctx.request.method == "POST"){
+                ctx.response.status = 422;
+            ctx.response.message = "álbum no existe";
+            }
+            else {
+                ctx.response.status = 404;
+                ctx.response.message = "álbum no encontrado";
+            }
+           
         return  ctx.response.satus }
 
             
