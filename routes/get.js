@@ -136,7 +136,7 @@ router.post('artistas','artists', KoaBody(),  validArtist, oneArtist,async (ctx)
     //const new_user = await ctx.db.artista.create(diccionario);
     diccionario_response = 
     {
-      "id": id_listo,
+      //"id": id_listo,
       "name": name,
       "age": age,
       "albums": albums,
@@ -144,6 +144,7 @@ router.post('artistas','artists', KoaBody(),  validArtist, oneArtist,async (ctx)
       "self": self
 
   }
+  ctx.response.status = 201
     ctx.body = diccionario_response;
   });
 

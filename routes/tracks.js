@@ -66,7 +66,7 @@ router.post('tracks','albums/:id/tracks', KoaBody(), validTrack, oneTrack, async
     //const new_user = await ctx.db.cancion.create(diccionario);
     diccionario_response = 
     {
-        "id": id_track,
+       // "id": id_track,
         "album_id": id_r_album,
         "name": name,
         "duration": duration,
@@ -77,7 +77,8 @@ router.post('tracks','albums/:id/tracks', KoaBody(), validTrack, oneTrack, async
        
 
 
-  }
+  } 
+    ctx.response.status = 201
     ctx.body = diccionario_response;
   });
 

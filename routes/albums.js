@@ -106,7 +106,7 @@ router.post('albums','artists/:id/albums', KoaBody(), validAlbum, oneAlbum, asyn
     //const new_user = await ctx.db.albume.create(diccionario);
     diccionario_response = 
     {
-        "id": id_album,
+       // "id": id_album,
         "artist_id": id_r,
         "name": name,
         "genre": genre,
@@ -115,6 +115,7 @@ router.post('albums','artists/:id/albums', KoaBody(), validAlbum, oneAlbum, asyn
         "self": self,
 
   }
+  ctx.response.status = 201
     ctx.body = diccionario_response;
   });
 
